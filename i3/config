@@ -231,7 +231,8 @@ client.placeholder      #000000 #0d0d0d #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 
-exec init_session.sh
+# init_session is a infact runs startup.py from the script folder
+exec init_session 
 exec_always nitrogen --restore
 
 # remove-able
