@@ -238,6 +238,7 @@ exec_always nitrogen --restore
 # remove-able
 #exec_always picom -f
 exec_always picom #--experimental-backends -b
+exec_always autotiling
 
 # Assign programs to workspaces
 for_window [class="discord"] move to workspace $ws10
