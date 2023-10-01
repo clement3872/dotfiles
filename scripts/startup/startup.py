@@ -47,9 +47,19 @@ if is_screen_connected("DP-0"):
     print("DP-0: resolution and rate set")
 else: print("DP-0: not connected")
 
+
+# special case for Logitech mouse
+mouse_status = False
 if is_usb_connected("Logitech, Inc. USB Receiver"):
     os.system(f'xinput --set-prop "Logitech USB Receiver" "libinput Accel Speed" {logi_mouse_sensi}')
+    mouse_status = True
+if is_usb_connected("Logitech, Inc. PRO X Wireless"):
+    os.system(f'xinput --set-prop "Logitech PRO X Wireless" "libinput Accel Speed" {logi_mouse_sensi}')
+    mouse_status = True
+
+if mouse_status:
     print(f"Logitech mouse sensivity set to {logi_mouse_sensi}")
+
 
 
 run_app("redshift-gtk")
