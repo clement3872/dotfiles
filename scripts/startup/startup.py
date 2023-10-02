@@ -64,3 +64,4 @@ if mouse_status:
 
 run_app("redshift-gtk")
 run_app("autotiling")
+run_app("megasync")
