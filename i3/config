@@ -63,6 +63,7 @@ bindsym $mod+q exec kitty
 bindsym $mod+e exec thunar
 bindsym $mod+Shift+s exec flameshot gui
 bindsym $Alt+s exec firefox --private-window
+bindsym $Alt+Shift+s exec microsoft-edge-stable https://www.bing.com/chat 
 
 # volume and brightness
 bindsym $Alt+Shift+Up exec brightnessctl set 5%+
