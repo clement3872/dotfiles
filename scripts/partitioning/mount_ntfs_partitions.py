@@ -28,11 +28,16 @@ def get_disk_name(disk):
     ['/dev/sdd1: LABEL=', 'T7', ' BLOCK_SIZE=', '512', ' UUID=', 'CAB2A7C9B2A7B879', ' TYPE=', 'ntfs', ' PARTUUID=', '1f0e53ae-01', '']
     so we need all what is before the ":"
     """ 
-    # return the 2nd index of it, without odd characters
-    return ''.join(e for e in disk.split('"')[1] if e.isalnum())
+    if "LABEL" in disk:
+        # the 2nd index of it, without odd characters
+        name = ''.join(e for e in disk.split('"')[1] if e.isalnum())
+    else:
+        name = get_disk_path(disk)
+
+    return name
 
 
-disk_info = os.popen('sudo blkid | grep ": LABEL" | grep ntfs').read().split('\n')[:-1]
+disk_info = os.popen('sudo blkid | grep ntfs').read().split('\n')[:-1]
 
 disk_info = [(get_disk_path(disk), get_disk_name(disk)) for disk in disk_info]
 
