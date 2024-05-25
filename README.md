@@ -1,3 +1,3 @@
 # dotefiles
 
-Here are some files from my .config folder (on Archlinux). 
+Here are some dotfiles from my Archlinux. 
