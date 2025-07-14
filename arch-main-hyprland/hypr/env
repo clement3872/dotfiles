@@ -1,0 +1,9 @@
+export XDG_CURRENT_DESKTOP=Hyprland
+export QT_QPA_PLATFORM=wayland
+export SDL_VIDEODRIVER=wayland
+export MOZ_ENABLE_WAYLAND=1
+export WINIT_UNIX_BACKEND=wayland
+
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export WLR_BACKENDS=wayland
+
