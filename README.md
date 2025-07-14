@@ -17,7 +17,7 @@ dotfiles/
 
 - **distro**: `arch`, `manjaro`, `ubuntu`, etc.
 - **device**: `main`, `laptop`, `server`, etc.
-- desktop-environment: `hyprland`, `i3`, `gnome`, `kde`, etc.
+- **desktop-environment**: `hyprland`, `i3`, `gnome`, `kde`, etc.
 
 ## Usage
 
