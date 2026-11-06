@@ -1,4 +1,4 @@
-# dotefiles
+# dotfiles
 
 Personal configuration files for various machines and desktop environments.
 
